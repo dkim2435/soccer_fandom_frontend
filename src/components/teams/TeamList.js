@@ -1,39 +1,17 @@
 import React from 'react'
+import TeamSummary from './TeamSummary';
 
-const ProjectList = () => {
+const TeamList = ({ teams }) => {
   return (
     <div className="project-list section">
-
-      {/* We use the card class to create a card. */}
-      <div className="card z-depth-0 project-summary">
-        {/* With the card-content class, we create the body part of the card space. */}
-        <div className="card-content grey-text text-darken-3">
-          <span className="card-title ">Team title</span>
-          <p>Team Information</p>
-          <p className="grey-text">Links to the Team Profile Page</p>
-        </div>
-      </div>
-
-      <div className="card z-depth-0 project-summary">
-        {/* With the card-content class, we create the body part of the card space. */}
-        <div className="card-content grey-text text-darken-3">
-          <span className="card-title ">Team title</span>
-          <p>Team Information</p>
-          <p className="grey-text">Links to the Team Profile Page</p>
-        </div>
-      </div>
-
-      <div className="card z-depth-0 project-summary">
-        {/* With the card-content class, we create the body part of the card space. */}
-        <div className="card-content grey-text text-darken-3">
-          <span className="card-title ">Team title</span>
-          <p>Team Information</p>
-          <p className="grey-text">Links to the Team Profile Page</p>
-        </div>
-      </div>
-
+      {/*we can use as much teamSummary as we want */}
+      {teams && teams.map(team => {
+        return (
+          <TeamSummary team={team} key={team.id} />
+        )
+      })}
     </div>
   )
 }
 
-export default ProjectList
+export default TeamList

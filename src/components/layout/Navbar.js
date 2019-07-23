@@ -8,8 +8,8 @@ import SignedOutLinks from './SignedOutLinks';
 
 const Navbar = () => {
   return (
-    //navbar forming class
-    <nav className="nav-wrapper light-blue lighten-2">
+    //navbar forming class ( light-blue lighten-2)
+    <nav className="nav-wrapper blue-grey">
       <div className="container">
         <Link to='/' className="brand-logo">Soccer Fandom</Link>
         <SignedInLinks />
