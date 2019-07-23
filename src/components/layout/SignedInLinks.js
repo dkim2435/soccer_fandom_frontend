@@ -8,7 +8,7 @@ const SignInLinks = () => {
   return (
     // links to the right
     <ul className="right">
-      <li><NavLink to='/'>New Team</NavLink></li>
+      <li><NavLink to='/add'>Add Team</NavLink></li>
       <li><NavLink to='/'>Log Out</NavLink></li>
       <li><NavLink to='/' className="btn btn-floating red">EK</NavLink></li>
     </ul>
