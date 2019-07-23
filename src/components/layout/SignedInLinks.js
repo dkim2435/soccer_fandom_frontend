@@ -1,3 +1,4 @@
+//! Navbar that the user will see once they are logged in
 import React from 'react';
 
 // need to export this to perform routing:
