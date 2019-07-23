@@ -10,6 +10,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
 //store, thunk will be used to provide information
 const store = createStore(rootReducer, applyMiddleware(thunk))
 

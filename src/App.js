@@ -9,25 +9,35 @@ import TeamDetails from './components/teams/TeamDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import AddTeam from './components/teams/AddTeam'
+// import './App.css';
+import Parallax from "./components/Parallex";
 
 
 class App extends Component {
+
   render() {
     return (
       //other components must be included in the BrowserRouter component
-      <BrowserRouter>
-        <div className="App">
-          <Navbar />
-          <Switch>
-            <Route exact path='/' component={Dashboard} />
-            <Route path='/team/:id' component={TeamDetails} />
-            <Route path='/signin' component={SignIn} />
-            <Route path='/signup' component={SignUp} />
-            <Route path='/add' component={AddTeam} />
-          </Switch>
+      <div>
+        <BrowserRouter>
+          <div className="App">
+            <Navbar />
 
-        </div>
-      </BrowserRouter>
+            <Parallax />
+
+            <Switch>
+              <Route exact path='/' component={Dashboard} />
+              <Route path='/team/:id' component={TeamDetails} />
+              <Route path='/signin' component={SignIn} />
+              <Route path='/signup' component={SignUp} />
+              <Route path='/add' component={AddTeam} />
+            </Switch>
+          </div>
+        </BrowserRouter>
+
+      </div>
+
+
     );
   }
 }
