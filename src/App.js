@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 //Import the routing module,Switch and Route.
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 //Import Navbar function in the file
-import Navbar from './components/layout/Navbar';
-import Dashboard from './components/dashboard/Dashboard'
+import Navbar from './components/Navbar/Navbar';
 //Import the TeamDetails function in the file
 import TeamDetails from './components/teams/TeamDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
-import AddTeam from './components/teams/AddTeam'
 // import './App.css';
-import Parallax from "./components/Parallex";
+import Parallax from "./components/materialize/Parallex";
+import TeamCard from './components/teams/TeamCard';
+import TeamsContainer from './components/containers/TeamsContainer';
 
 
 class App extends Component {
@@ -22,15 +22,13 @@ class App extends Component {
         <BrowserRouter>
           <div className="App">
             <Navbar />
-
             <Parallax />
-
             <Switch>
-              <Route exact path='/' component={Dashboard} />
+              <Route exact path='/myteam' component={TeamsContainer} />
               <Route path='/team/:id' component={TeamDetails} />
               <Route path='/signin' component={SignIn} />
               <Route path='/signup' component={SignUp} />
-              <Route path='/add' component={AddTeam} />
+              <Route path='/add' component={TeamCard} />
             </Switch>
           </div>
         </BrowserRouter>

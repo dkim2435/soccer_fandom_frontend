@@ -1,10 +1,10 @@
 //import connect module
 import { connect } from 'react-redux'
 import React, { Component } from 'react';
-import Notifications from './Notifications';
 import TeamList from '../teams/TeamList'
 
-class Dashboard extends Component {
+class TeamsContainer extends Component {
+
   render() {
     //let's use projects object
     const { teams } = this.props;
@@ -16,10 +16,6 @@ class Dashboard extends Component {
             <div className="col s12 m6"> {/*한 페이지에 총 12개의 그리드 중 6개를 사용 */}
               {/* TeamList Component here */}
               <TeamList teams={teams} />
-            </div>
-            <div className="col s12 m5 offset-m1">{/*나머지 6개중 5개를 쓰고 하나는 쉬프트 */}
-              {/* Notifications Component here */}
-              <Notifications />
             </div>
           </div>
         </div>
@@ -37,4 +33,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps)(Dashboard)
+export default connect(mapStateToProps)(TeamsContainer)
