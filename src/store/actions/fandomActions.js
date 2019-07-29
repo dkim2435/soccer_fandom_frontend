@@ -31,15 +31,33 @@ export function fandom(token, teamData) {
       body: JSON.stringify({ team: teamData })
     })
       .then(res => res.json())
-      .then(teams => {
+      .then(res => {
         // console.log(teams)
-        dispatch({
-          type: 'FANDOM',
-          payload: teams
-        })
+        if (res.user)
+          dispatch({ type: 'SET_USER', user: res.user })
       })
       .catch(error => {
         dispatch({ type: 'ADD_ALERT_MESSAGE', message: error.teams.data })
+      })
+  }
+}
+
+export function removeFandom(token, teamId) {
+  const auth = 'Bearer ' + token
+  console.log(auth)
+  return (dispatch) => {
+    fetch(`${API_URL}removeFandom/${teamId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: auth
+      }
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res.user)
+          dispatch({ type: 'SET_USER', user: res.user })
       })
   }
 }

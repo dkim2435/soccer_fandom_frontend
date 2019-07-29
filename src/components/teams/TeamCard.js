@@ -7,7 +7,8 @@ class TeamCard extends Component {
   handleClick = (e) => {
     e.preventDefault()
     console.log('jwt token', localStorage.token)
-    this.props.fandom(localStorage.token, this.props.team)
+    this.props.dispatch(fandom(localStorage.token, this.props.team))
+
   }
   render() {
     return (
@@ -24,14 +25,14 @@ class TeamCard extends Component {
         <a
           className="btn-floating waves-effect waves-light red right plus"><i className="material-icons"
             onClick={this.handleClick}>add</i>
-
         </a>
+
       </div >
     )
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  fandom: (token, favs) => dispatch(fandom(token, favs))
-})
-export default connect(null, mapDispatchToProps)(TeamCard)
+// const mapDispatchToProps = dispatch => ({
+//   fandom: (token, favs) => dispatch(fandom(token, favs))
+// })
+export default connect()(TeamCard)

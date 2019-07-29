@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // import FandomsList from '../Fandoms/FandomsList'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import TeamCard from '../teams/TeamCard'
+import Fandom from '../Fandom/Fandom'
 
 
 class FandomsContainer extends Component {
@@ -17,7 +17,7 @@ class FandomsContainer extends Component {
         <Link to="/teams" className="waves-effect waves-light btn white-text">add</Link>
         <div className='fandom-container'>
           {this.props.fanTeams.map(team => {
-            return <TeamCard key={team.id} team={team} />
+            return <Fandom key={team.id} team={team} />
           })
           }
         </div>
