@@ -1,28 +1,30 @@
-import React, { Component } from 'react'
-import Image1 from "/Users/Evan/Desktop/project/soccer_fandom_frontend/src/images/Red-Devils-logo.png";
+import React from 'react'
+import '../../stylesheets/TeamCard.css'
+const TeamCard = (props) => {
 
+  // handleClick = (e) => {
+  //   e.preventDefault()
+  //   this.props.fandom(window.localStorage.getItem)
+  // }
 
-class TeamCard extends Component {
+  return (
+    <div className="team-card blue-grey">
 
-
-  render() {
-    return (
-      <div className="row">
-        <div className="col s12 m3">
-          <div className="card">
-            <div className="card-image">
-              <img src={Image1} />
-              <a className="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-            <div className="card-content blue-grey white-text">
-              <span className="card-title white-text">title</span>
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-          </div>
-        </div>
+      <div className="team-card-image center">
+        <img src={props.team.image} />
       </div>
-    )
-  }
+
+      <div className="team-card-info center white-text">
+        <p><h6><b>{props.team.teamname}</b></h6><em>{props.team.league.leaguename}</em></p>
+      </div>
+
+      <a className="btn-floating waves-effect waves-light red right plus"><i
+        className="material-icons">add</i></a>
+      {/* onClick={this.handleClick(console.log("clicked"))}>add</i></a> */}
+
+
+    </div >
+  )
 }
 
 export default TeamCard

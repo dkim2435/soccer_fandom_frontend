@@ -15,9 +15,7 @@ class Parallax extends Component {
       <div>
         <div className="parallax-container">
           <div
-            ref={Parallax => {
-              this.Parallax1 = Parallax;
-            }}
+            ref={Parallax => { this.Parallax1 = Parallax; }}
             className="parallax"
           >
             <img src={Image2} />
@@ -32,9 +30,7 @@ class Parallax extends Component {
           </div>
         </div>
         <div
-          ref={Parallax => {
-            this.Parallax2 = Parallax;
-          }}
+          ref={Parallax => { this.Parallax2 = Parallax; }}
           className="parallax-container"
         >
           <div className="parallax">

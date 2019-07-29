@@ -1,0 +1,6 @@
+export const FETCH_TEAMS = 'FETCH_TEAMS';
+export const LOADING_TEAMS = 'LOADING_TEAMS';
+
+export const SIGNUP_START = 'SIGNUP_START'
+export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS'
+export const SIGN_FAIL = 'SIGN_FAIL'

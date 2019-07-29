@@ -1,6 +1,6 @@
 //import the reducers to be merged
 import authReducer from './authReducer'
-import teamReducer from './teamReducer'
+import teamsReducer from './teamsReducer'
 
 //call the combiner module
 import { combineReducers } from 'redux'
@@ -9,7 +9,7 @@ import { combineReducers } from 'redux'
 //merge using combineReducer
 const rootReducer = combineReducers({
   auth: authReducer,
-  team: teamReducer
+  teams: teamsReducer
 })
 
 export default rootReducer

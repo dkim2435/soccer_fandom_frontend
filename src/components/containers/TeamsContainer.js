@@ -1,36 +1,58 @@
 //import connect module
 import { connect } from 'react-redux'
-import React, { Component } from 'react';
-import TeamList from '../teams/TeamList'
+import React from 'react';
+// import TeamCard from '../teams/TeamCard'
+import TeamsList from '../teams/TeamsList'
+import { Dropdown, Divider, Button } from 'react-materialize'
 
-class TeamsContainer extends Component {
+
+
+class TeamsContainer extends React.Component {
+  // if (props.teams[0])
+  // console.log("Team Container props: ", props.teams[0][0])
+  state = {
+    search: false,
+    filter: false,
+    sort: false
+  }
+
+  getTeams = () => {
+    let showTeams = this.props.teams
+
+    if (this.state.filter)
+      showTeams = showTeams.filter(t => t.league.leaguename === this.state.filter)
+
+    return showTeams
+  }
+
 
   render() {
-    //let's use projects object
-    const { teams } = this.props;
+    // console.log(this.props.teams)
+
+    if (!this.props.teams)
+      return null
 
     return (
-      <div className="blue-grey">
-        <div className="dashboard container blue-grey">
-          <div className="row">
-            <div className="col s12 m6"> {/*한 페이지에 총 12개의 그리드 중 6개를 사용 */}
-              {/* TeamList Component here */}
-              <TeamList teams={teams} />
-            </div>
-          </div>
-        </div>
-      </div >
+      <div className="TeamsContainer" >
+        <Dropdown title="test" trigger={<Button>Filter by League</Button>}>
+          <a onClick={() => this.setState({ filter: false })}>All</a>
+          <a onClick={() => this.setState({ filter: 'EPL' })}>EPL</a>
+          <a onClick={() => this.setState({ filter: 'La Liga' })}>La Liga</a>
+          <a onClick={() => this.setState({ filter: 'Bundesliga' })}>Bundesliga</a>
+          <a onClick={() => this.setState({ filter: 'Serie A' })}>Serie A</a>
+          <Divider />
+        </Dropdown>
+
+        <TeamsList teams={this.getTeams()} />
+      </div>
     )
   }
 }
-
 //function that gets data from store
 const mapStateToProps = (state) => {
   return {
-    teams: state.team.teams
-
+    teams: state.teams.teams[0]
   }
 }
-
 
 export default connect(mapStateToProps)(TeamsContainer)
