@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import '../../stylesheets/TeamCard.css'
-import { fandom } from '../.././store/actions/fandomActions'
 import { connect } from 'react-redux'
+
+import '../../stylesheets/TeamCard.css'
+
+import { fandom } from '../.././store/actions/fandomActions'
+
 class TeamCard extends Component {
 
   handleClick = (e) => {
     e.preventDefault()
-    console.log('jwt token', localStorage.token)
+    // console.log('jwt token', localStorage.token)
     this.props.dispatch(fandom(localStorage.token, this.props.team))
 
   }
@@ -14,7 +17,7 @@ class TeamCard extends Component {
     return (
       <div className="team-card blue-grey" >
 
-        <div className="team-card-image center">
+        <div className="team-card-image">
           <img src={this.props.team.image} />
         </div>
 
@@ -31,8 +34,4 @@ class TeamCard extends Component {
     )
   }
 }
-
-// const mapDispatchToProps = dispatch => ({
-//   fandom: (token, favs) => dispatch(fandom(token, favs))
-// })
 export default connect()(TeamCard)

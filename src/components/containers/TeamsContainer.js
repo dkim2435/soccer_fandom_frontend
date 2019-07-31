@@ -27,7 +27,7 @@ class TeamsContainer extends React.Component {
 
 
   render() {
-    console.log(this.props.teams)
+    // console.log(this.props.teams)
 
     if (!this.props.teams)
       return null

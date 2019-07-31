@@ -8,7 +8,7 @@ export function fetchUserData() {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res)
+        // console.log(res)
         if (res.user)
           dispatch({ type: 'SET_USER', user: res.user })
       })
@@ -19,7 +19,6 @@ export function fetchUserData() {
 export function fandom(token, teamData) {
   // console.log('action data', teamData)
   const auth = 'Bearer ' + token
-  console.log(auth)
   return (dispatch) => {
     fetch(`${API_URL}add_fandom`, {
       method: 'POST',
@@ -44,7 +43,7 @@ export function fandom(token, teamData) {
 
 export function removeFandom(token, teamId) {
   const auth = 'Bearer ' + token
-  console.log(auth)
+  // console.log(auth)
   return (dispatch) => {
     fetch(`${API_URL}removeFandom/${teamId}`, {
       method: 'DELETE',

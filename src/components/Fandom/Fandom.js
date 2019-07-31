@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 class Fandom extends Component {
 
   handleClick = (e) => {
-    console.log("this is deleted")
+    // console.log("this is deleted")
     e.preventDefault()
     this.props.dispatch(removeFandom(localStorage.token, this.props.team.id))
   }

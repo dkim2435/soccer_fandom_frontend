@@ -11,7 +11,8 @@ const SignedInLinks = (props) => {
     <ul className="right">
       <li><NavLink to='/fandoms'>My Page</NavLink></li>
       <li><NavLink onClick={() => props.dispatch({ type: 'LOG_OUT' })} to='/'>Log Out</NavLink></li>
-      <li><NavLink to='/' className="btn btn-floating red">EK</NavLink></li>
+      <li><NavLink to='/highlights' >Highlights</NavLink></li>
+
     </ul>
   )
 }
