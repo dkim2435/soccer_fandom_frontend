@@ -16,7 +16,6 @@ import { fetchHighlights } from '../src/store/actions/highlightActions'
 import { connect } from 'react-redux';
 import Fandomscontainer from './components/containers/FandomsContainer';
 import './App.css';
-import HighlightsContainer from './components/containers/HighlightsContainer';
 
 class App extends Component {
 
@@ -37,7 +36,6 @@ class App extends Component {
 
         <Switch>
           <Route path='/teams' component={TeamsContainer} />
-          <Route path='/highlights' component={HighlightsContainer} />
           <Route path='/fandoms' render={() => this.props.loggedIn ? <Fandomscontainer /> : <Redirect to='/signin' />} />
 
           {/* <Route path='/team/:id' component={TeamDetails} /> */}

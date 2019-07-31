@@ -9,9 +9,12 @@ const SignedInLinks = (props) => {
   return (
     // links to the right
     <ul className="right">
-      <li><NavLink to='/fandoms'>My Page</NavLink></li>
-      <li><NavLink onClick={() => props.dispatch({ type: 'LOG_OUT' })} to='/'>Log Out</NavLink></li>
-      <li><NavLink to='/highlights' >Highlights</NavLink></li>
+      <li><NavLink to='/fandoms'>
+        <i class="material-icons">face</i>
+      </NavLink></li>
+      <li><NavLink onClick={() => props.dispatch({ type: 'LOG_OUT' })} to='/'>
+        <i class="material-icons">exit_to_app</i>
+      </NavLink></li>
 
     </ul>
   )

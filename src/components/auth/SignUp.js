@@ -125,6 +125,7 @@ class SignUp extends Component {
     // ))
     const usernameForm =
       <TextInput
+        icon="face"
         name='username'
         key={formElementsArray.id}
         label="User Name"
@@ -133,6 +134,7 @@ class SignUp extends Component {
 
     const emailForm =
       <TextInput
+        icon="email"
         email
         validate
         name='email'
@@ -143,6 +145,7 @@ class SignUp extends Component {
 
     const passwordForm =
       <TextInput
+        icon="vpn_key"
         password
         name='password'
         key={formElementsArray.id}
@@ -156,7 +159,7 @@ class SignUp extends Component {
           {usernameForm}
           {emailForm}
           {passwordForm}
-          <Button btnType="Success"> SUBMIT </Button>
+          <Button btnType="Success"> SIGN UP </Button>
         </form>
       </div>
     )

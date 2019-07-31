@@ -3,6 +3,8 @@ import { TextInput, Button } from 'react-materialize'
 import '../auth/SignIn.css'
 import * as actions from '../../store/actions/index'
 import { connect } from 'react-redux'
+import '../../stylesheets/SignIn.css'
+
 
 class SignIn extends Component {
 
@@ -13,11 +15,11 @@ class SignIn extends Component {
 
   render() {
     return (
-      <div className="SignIn">
+      <div className="SignIn center">
         <form onSubmit={this.submitHandler}>
-          <TextInput email validate label="Email" name='email' />
-          <TextInput password label="password" name='password' />
-          <Button btnType="Success"> SUBMIT </Button>
+          <TextInput icon="email" email validate label="Email" name='email' />
+          <TextInput icon="vpn_key" password label="Password" name='password' />
+          <Button btnType="Success"> Login </Button>
         </form>
       </div>
     )
