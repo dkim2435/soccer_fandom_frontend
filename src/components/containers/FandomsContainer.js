@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { Tabs, Tab } from 'react-materialize'
+import Sidenav from '../materialize/Sidenav'
 import '../../stylesheets/FandomsContainer.css'
 
 import Fandom from '../Fandom/Fandom'
@@ -21,6 +22,7 @@ class FandomsContainer extends Component {
     return (
 
       <div >
+        <Sidenav />
         <Tabs className="tab-demo z-depth-1">
           <Tab title="Fandoms" active>
             <Link to="/teams" className="waves-effect waves-light btn white-text">add</Link>
@@ -48,6 +50,7 @@ class FandomsContainer extends Component {
 const mapStateToProps = (state) => {
   return {
     fanTeams: state.auth.user.teams,
+    user: state.auth.user,
     fanLights: state.highlights.highlights
   }
 }

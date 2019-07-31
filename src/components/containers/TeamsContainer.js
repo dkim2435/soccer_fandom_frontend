@@ -1,9 +1,10 @@
-//import connect module
 import { connect } from 'react-redux'
 import React from 'react';
-// import TeamCard from '../teams/TeamCard'
+
 import TeamsList from '../teams/TeamsList'
+
 import { Dropdown, Divider, Button } from 'react-materialize'
+import Sidenav from '../materialize/Sidenav'
 
 
 
@@ -34,6 +35,7 @@ class TeamsContainer extends React.Component {
 
     return (
       <div className="TeamsContainer" >
+        <Sidenav />
         <Dropdown title="test" trigger={<Button>Filter by League</Button>}>
           <a onClick={() => this.setState({ filter: false })}>All</a>
           <a onClick={() => this.setState({ filter: 'EPL' })}>EPL</a>
