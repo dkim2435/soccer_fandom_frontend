@@ -12,6 +12,7 @@ import Parallax from "./components/materialize/Parallex";
 import TeamsContainer from './components/containers/TeamsContainer';
 import { fetchTeams } from '../src/store/actions/teamActions'
 import { fetchUserData } from '../src/store/actions/fandomActions'
+import { fetchHighlights } from '../src/store/actions/highlightActions'
 import { connect } from 'react-redux';
 import Fandomscontainer from './components/containers/FandomsContainer';
 import './App.css';
@@ -23,6 +24,8 @@ class App extends Component {
 
     if (localStorage.token)
       this.props.fetchUserData()
+
+    this.props.fetchHighlights()
   }
 
   render() {
@@ -48,4 +51,5 @@ class App extends Component {
 }
 
 let mapStateToProps = state => ({ loggedIn: state.auth.loggedIn })
-export default connect(mapStateToProps, { fetchTeams, fetchUserData })(App)
+
+export default connect(mapStateToProps, { fetchTeams, fetchUserData, fetchHighlights })(App)

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
-import Image1 from "/Users/Evan/Desktop/project/soccer_fandom_frontend/src/images/image2.jpg";
-import Image2 from "/Users/Evan/Desktop/project/soccer_fandom_frontend/src/images/HomePage.jpg"
+import Image1 from "../../images/image2.jpg";
+import Image2 from "../../images/HomePage.jpg"
 
 class Parallax extends Component {
   componentDidMount() {
