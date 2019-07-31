@@ -25,7 +25,7 @@ class FandomsContainer extends Component {
         <Sidenav />
         <Tabs className="tab-demo z-depth-1">
           <Tab title="Fandoms" active>
-            <Link to="/teams" className="waves-effect waves-light btn white-text">add</Link>
+            {/* <Link to="/teams" className="waves-effect waves-light btn white-text">add</Link> */}
             <div className='fandom'>
               {this.props.fanTeams.map(team => {
                 return <Fandom key={team.id} team={team} />

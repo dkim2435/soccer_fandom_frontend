@@ -38,6 +38,7 @@ class TeamsContainer extends React.Component {
         <Sidenav />
         <Dropdown title="test" trigger={<Button>Filter by League</Button>}>
           <a onClick={() => this.setState({ filter: false })}>All</a>
+          <Divider />
           <a onClick={() => this.setState({ filter: 'EPL' })}>EPL</a>
           <a onClick={() => this.setState({ filter: 'La Liga' })}>La Liga</a>
           <a onClick={() => this.setState({ filter: 'Bundesliga' })}>Bundesliga</a>

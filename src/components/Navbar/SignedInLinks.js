@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 // need to export this to perform routing:
 import { NavLink } from 'react-router-dom';
 
+
 const SignedInLinks = (props) => {
   return (
     // links to the right
@@ -15,7 +16,6 @@ const SignedInLinks = (props) => {
       <li><NavLink onClick={() => props.dispatch({ type: 'LOG_OUT' })} to='/'>
         <i class="material-icons">exit_to_app</i>
       </NavLink></li>
-
     </ul>
   )
 }

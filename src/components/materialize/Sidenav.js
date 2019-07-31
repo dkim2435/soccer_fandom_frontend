@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
+import '../../stylesheets/Sidenav.css'
 import image1 from "../../images/HomePage.jpg";
 import image2 from "../../images/image2.jpg";
-import { connect } from 'react-redux'
 
 class Sidenav extends Component {
   componentDidMount() {
@@ -69,7 +69,7 @@ class Sidenav extends Component {
           </li>
         </ul>
         <a href="#!" data-target="slide-out" className="sidenav-trigger">
-          <i className="material-icons">menu</i>
+          <i className="sidenav-icon small material-icons ">menu</i>
         </a>
       </div>
     );
