@@ -58,6 +58,10 @@ class Fandom extends Component {
             className="btn-floating waves-effect waves-light red right minus"><i className="material-icons"
               onClick={this.handleClick}>remove</i>
           </a>
+          <a
+            className="btn-floating waves-effect waves-light red right plus"><i className="material-icons"
+              onClick={this.handleDetails}>plus</i>
+          </a>
         </div>
 
       </>

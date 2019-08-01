@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
-import '../../stylesheets/TeamCard.css'
+import '../../stylesheets/PlayerCard.css'
 // import { connect } from 'react-redux'
-import '../../stylesheets/Fandom.css'
+
 
 
 export default function PlayerCard(props) {
   let { player } = props
   return (
-    <div className="team-card blue-grey" >
+    <div className="player-card blue-grey" >
 
-      <div className="team-card-image">
+      <div className="player-card-image">
         <img src={player.PhotoUrl} />
       </div>
 
-      <div className="team-card-info center white-text">
-        {/* <p><h6><b>{this.props.team.teamname}</b></h6><em>{this.props.team.league.leaguename}</em></p> */}
+      <div className="player-card-info center white-text">
+        <p><h6><b>{player.ShortName}</b></h6></p>
+        <p><em><b>{player.Jersey}</b></em></p>
+        <p>Nationality: <b>{player.Nationality}</b></p>
+        <p>Position: <b>{player.Position}</b></p>
       </div>
 
       {/* <a

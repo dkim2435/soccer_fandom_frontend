@@ -40,7 +40,8 @@ const mapStateToProps = (state) => {
   return {
     fanTeams: state.auth.user.teams,
     user: state.auth.user,
-    fanLights: state.highlights.highlights
+    fanLights: state.highlights.highlights,
+    eTeams: state.englandData.englandData.Teams
 
   }
 }
