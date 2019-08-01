@@ -4,6 +4,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import '../../stylesheets/Sidenav.css'
 import image1 from "../../images/HomePage.jpg";
 import image2 from "../../images/image2.jpg";
+import { connect } from 'react-redux'
 
 class Sidenav extends Component {
   componentDidMount() {
@@ -40,7 +41,7 @@ class Sidenav extends Component {
                 <span className="white-text name"></span>
               </a>
               <a href="#email">
-                <span className="white-text email">dkim2435@gmail.com</span>
+                <span className="white-text email">{this.props.user.username}</span>
               </a>
             </div>
           </li>
@@ -80,5 +81,8 @@ class Sidenav extends Component {
     );
   }
 }
+let mapStateToProps = state => ({
+  user: state.auth.user
+})
 
-export default Sidenav;
+export default connect(mapStateToProps)(Sidenav)

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../../stylesheets/PlayerCard.css'
-// import { connect } from 'react-redux'
 
 
 

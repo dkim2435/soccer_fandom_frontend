@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { Tabs, Tab } from 'react-materialize'
+
 import Sidenav from '../materialize/Sidenav'
 import '../../stylesheets/FandomsContainer.css'
 
 import Fandom from '../Fandom/Fandom'
-import FandomHighlights from '../Fandom/FandomHighlights'
-import EnglandTeamCard from '../teams/EnglandTeamCard';
 import { Link } from 'react-router-dom'
 
 

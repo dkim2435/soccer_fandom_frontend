@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import '../../stylesheets/Fandom.css'
 
-class EnglandTeamCard extends Component {
+class GermanyTeamCard extends Component {
 
   render() {
 
@@ -36,4 +36,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(EnglandTeamCard)
+export default connect(mapStateToProps)(GermanyTeamCard)

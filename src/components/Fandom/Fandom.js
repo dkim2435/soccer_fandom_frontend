@@ -3,9 +3,7 @@ import '../../stylesheets/Fandom.css'
 import { removeFandom } from '../../store/actions/fandomActions'
 import { connect } from 'react-redux'
 import { Button } from 'react-materialize'
-import { Link } from 'react-router-dom'
 
-import FandomDetails from './GameSchedules'
 
 class Fandom extends Component {
 
@@ -58,10 +56,10 @@ class Fandom extends Component {
             className="btn-floating waves-effect waves-light red right minus"><i className="material-icons"
               onClick={this.handleClick}>remove</i>
           </a>
-          <a
+          {/* <a
             className="btn-floating waves-effect waves-light red right plus"><i className="material-icons"
               onClick={this.handleDetails}>plus</i>
-          </a>
+          </a> */}
         </div>
 
       </>

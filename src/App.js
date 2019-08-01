@@ -15,6 +15,10 @@ import { fetchTeams } from '../src/store/actions/teamActions'
 import { fetchUserData } from '../src/store/actions/fandomActions'
 import { fetchHighlights } from '../src/store/actions/highlightActions'
 import { fetchEnglandData } from '../src/store/actions/englandActions'
+import { fetchSpainData } from '../src/store/actions/spainActions'
+import { fetchGermanyData } from '../src/store/actions/germanyActions'
+import { fetchItalyData } from '../src/store/actions/italyActions'
+
 
 import { connect } from 'react-redux';
 import Fandomscontainer from './components/containers/FandomsContainer';
@@ -22,7 +26,6 @@ import './App.css';
 import HighlightsContainer from './components/containers/HighlightsContainer';
 import GameSchedules from './components/Fandom/GameSchedules'
 import TeamInformation from './components/teams/TeamInformation';
-import PlayerCard from './components/teams/PlayerCard'
 class App extends Component {
 
   componentDidMount() {
@@ -30,9 +33,13 @@ class App extends Component {
 
     if (localStorage.token)
       this.props.fetchUserData()
-
     this.props.fetchHighlights()
+
     this.props.fetchEnglandData()
+    this.props.fetchSpainData()
+    this.props.fetchGermanyData()
+    this.props.fetchItalyData()
+
   }
 
   render() {
@@ -64,4 +71,4 @@ class App extends Component {
 
 let mapStateToProps = state => ({ loggedIn: state.auth.loggedIn })
 
-export default connect(mapStateToProps, { fetchTeams, fetchUserData, fetchHighlights, fetchEnglandData })(App)
+export default connect(mapStateToProps, { fetchTeams, fetchUserData, fetchHighlights, fetchEnglandData, fetchSpainData, fetchGermanyData, fetchItalyData })(App)

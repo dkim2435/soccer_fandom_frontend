@@ -7,6 +7,9 @@ import englandDataReducer from './englandDataReducer'
 
 //call the combiner module
 import { combineReducers } from 'redux'
+import spainDataReducer from './spainDataReducer';
+import germanyDataReducer from './germanyDataReducer'
+import italyDataReducer from './italyReducer'
 
 
 
@@ -16,7 +19,10 @@ const rootReducer = combineReducers({
   teams: teamsReducer,
   fandoms: fandomsReducer,
   highlights: highlightsReducer,
-  englandData: englandDataReducer
+  englandData: englandDataReducer,
+  spainData: spainDataReducer,
+  germanyData: germanyDataReducer,
+  italyData: italyDataReducer
 })
 
 export default rootReducer
