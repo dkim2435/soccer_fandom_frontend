@@ -7,7 +7,7 @@ class HighlightsContainer extends Component {
     return (
       <div>
         <Sidenav />
-        <div className='highlights-container center'>
+        <div className=' blue lighten-5 highlights-container center'>
 
           <iframe src="https://www.scorebat.com/embed/" allowfullscreen allow="autoplay; fullscreen" className="_scorebatEmbeddedPlayer_"></iframe>
         </div>

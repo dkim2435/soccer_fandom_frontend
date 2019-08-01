@@ -10,6 +10,10 @@ function teamsReducer(state = initState, action) {
         ...state,
         teams: [action.payload]
       }
+    case 'SHOW_PLAYERS': {
+      return { ...state, showPlayers: action.payload }
+    }
+
     default:
       return state
   }

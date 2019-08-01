@@ -10,14 +10,19 @@ import SignUp from './components/auth/SignUp'
 import Parallax from "./components/materialize/Parallex";
 // import TeamCard from './components/teams/TeamCard';
 import TeamsContainer from './components/containers/TeamsContainer';
+import PlayersContainer from './components/containers/PlayersContainer'
 import { fetchTeams } from '../src/store/actions/teamActions'
 import { fetchUserData } from '../src/store/actions/fandomActions'
 import { fetchHighlights } from '../src/store/actions/highlightActions'
+import { fetchEnglandData } from '../src/store/actions/englandActions'
+
 import { connect } from 'react-redux';
 import Fandomscontainer from './components/containers/FandomsContainer';
 import './App.css';
 import HighlightsContainer from './components/containers/HighlightsContainer';
-
+import GameSchedules from './components/Fandom/GameSchedules'
+import TeamInformation from './components/teams/TeamInformation';
+import PlayerCard from './components/teams/PlayerCard'
 class App extends Component {
 
   componentDidMount() {
@@ -27,6 +32,7 @@ class App extends Component {
       this.props.fetchUserData()
 
     this.props.fetchHighlights()
+    this.props.fetchEnglandData()
   }
 
   render() {
@@ -37,6 +43,9 @@ class App extends Component {
 
         <Switch>
           <Route path='/teams' component={TeamsContainer} />
+          <Route path='/information' component={TeamInformation} />
+          <Route path='/players' component={PlayersContainer} />
+          <Route path='/schedule' component={GameSchedules} />
           <Route path='/highlights' component={HighlightsContainer} />
 
           <Route path='/fandoms' render={() => this.props.loggedIn ? <Fandomscontainer /> : <Redirect to='/signin' />} />
@@ -55,4 +64,4 @@ class App extends Component {
 
 let mapStateToProps = state => ({ loggedIn: state.auth.loggedIn })
 
-export default connect(mapStateToProps, { fetchTeams, fetchUserData, fetchHighlights })(App)
+export default connect(mapStateToProps, { fetchTeams, fetchUserData, fetchHighlights, fetchEnglandData })(App)

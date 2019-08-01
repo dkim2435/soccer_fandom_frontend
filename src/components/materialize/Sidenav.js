@@ -16,7 +16,7 @@ class Sidenav extends Component {
 
     let instance = M.Sidenav.getInstance(this.Sidenav);
     instance.close();
-    console.log(instance.isOpen);
+    // console.log(instance.isOpen);
   }
   render() {
     return (
@@ -63,13 +63,18 @@ class Sidenav extends Component {
             <div className="divider" />
           </li>
           <li>
-            <a className="waves-effect" href="#!">
-              Third Link With Waves
+            <a className="waves-effect" href="/schedule">
+              <i className="material-icons">today</i>Schedule
+            </a>
+          </li>
+          <li>
+            <a className="waves-effect" href="/information">
+              <i className="material-icons">people</i>TeamWiki
             </a>
           </li>
         </ul>
         <a href="#!" data-target="slide-out" className="sidenav-trigger">
-          <i className="sidenav-icon small material-icons ">menu</i>
+          <i className="sidenav-icon small material-icons ">more_vert</i>
         </a>
       </div>
     );
