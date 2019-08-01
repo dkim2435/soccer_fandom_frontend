@@ -1,9 +1,9 @@
 .fandom-card {
   /* display: inline-block; */
   height: 300px;
-  margin: 1.5%;
+  margin: 3%;
   float: left;
-  width: 22%;
+  width: 18%;
   
   border-radius: 8px;
 }
@@ -16,4 +16,7 @@
 
 .fandom-card .minus {
   margin: 5px 10px 0 0;
+}
+.squad-button{
+  margin: 0px 10px 0 90px
 }

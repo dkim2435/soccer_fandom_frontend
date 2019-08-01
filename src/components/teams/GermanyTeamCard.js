@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import '../../stylesheets/Fandom.css'
 
 class GermanyTeamCard extends Component {
@@ -24,12 +24,11 @@ class GermanyTeamCard extends Component {
           this.props.t.Players.map(p => {
             return <PlayerCard p={p} />
         }) : null} */}
-        <Link to="/players" onClick={() => this.props.dispatch({ type: 'SHOW_PLAYERS', payload: this.props.t.Players })} className="waves-effect waves-light btn white-text">more</Link>
+        <Link to="/players" onClick={() => this.props.dispatch({ type: 'SHOW_PLAYERS', payload: this.props.t.Players })} className="squad-button waves-effect waves-light btn yellow accent-4 black-text">squad</Link>
       </div>
     )
   }
 }
-
 const mapStateToProps = (state) => {
   return {
     tPlayers: state.englandData.englandData.Teams

@@ -21,7 +21,7 @@ class Sidenav extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="blue-grey">
         <ul
           ref={Sidenav => {
             this.Sidenav = Sidenav;
@@ -75,7 +75,7 @@ class Sidenav extends Component {
           </li>
         </ul>
         <a href="#!" data-target="slide-out" className="sidenav-trigger">
-          <i className="sidenav-icon small material-icons ">more_vert</i>
+          <i className=" sidenav-icon white-text small material-icons ">more_vert</i>
         </a>
       </div>
     );
