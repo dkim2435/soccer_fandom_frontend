@@ -25,7 +25,7 @@ class Parallax extends Component {
           <div className="row container">
             <h2 className="header white-text">Welcome to Soccer Fandom</h2>
             <p className="white-text"> {/* grey-text text-darken-3 lighten-3 */}
-              To use this website, click Sign In or Sign Up
+              Tryna party?? Sign in or Sign up
             </p>
           </div>
         </div>
