@@ -10,7 +10,7 @@ class HighlightsContainer extends Component {
       <div>
 
         <Sidenav />
-        <div className='orange accent-1 highlights-container center'>
+        <div className='blue-grey highlights-container center'>
           <iframe src="https://www.scorebat.com/embed/" allowfullscreen allow="autoplay; fullscreen" className="_scorebatEmbeddedPlayer_">
 
           </iframe>
